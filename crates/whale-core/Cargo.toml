@@ -1,7 +1,10 @@
+
 [package]
 name = "whale-core"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+description = "Core primitives and abstractions for the Whale server"
 
 [dependencies]
+
