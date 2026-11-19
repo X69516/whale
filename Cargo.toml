@@ -1,0 +1,44 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "apps/serverd",
+    "apps/supervisord",
+    "apps/whale-cli",
+
+    "crates/whale-core",
+    "crates/whale-tcp",
+    "crates/whale-tls",
+    "crates/whale-http",
+    "crates/whale-router",
+    "crates/whale-policy",
+    "crates/whale-identity",
+    "crates/whale-ipc",
+    "crates/whale-protocol",
+    "crates/whale-worker",
+    "crates/whale-supervisor",
+    "crates/whale-sandbox",
+    "crates/whale-config",
+    "crates/whale-audit",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+tokio = { version = "1", features = [
+    "rt-multi-thread",
+    "macros",
+    "net",
+    "io-util",
+    "sync",
+    "time",
+    "signal",
+] }
+
+anyhow = "1"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

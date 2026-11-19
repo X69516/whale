@@ -1,0 +1,84 @@
+/home/X/whale
+├── apps
+│   ├── serverd
+│   │   ├── src
+│   │   │   ├── bootstrap.rs
+│   │   │   ├── main.rs
+│   │   │   └── shutdown.rs
+│   │   └── Cargo.toml
+│   ├── supervisord
+│   │   ├── src
+│   │   │   ├── bootstrap.rs
+│   │   │   ├── main.rs
+│   │   │   └── shutdown.rs
+│   │   └── Cargo.toml
+│   └── whale-cli
+│       ├── src
+│       │   └── main.rs
+│       └── Cargo.toml
+├── crates
+│   ├── whale-audit
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-config
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-core
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-http
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-identity
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-ipc
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-policy
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-protocol
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-router
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-sandbox
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-supervisor
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   ├── whale-tcp
+│   │   ├── src
+│   │   │   ├── connection.rs
+│   │   │   ├── lib.rs
+│   │   │   ├── limits.rs
+│   │   │   └── listener.rs
+│   │   └── Cargo.toml
+│   ├── whale-tls
+│   │   ├── src
+│   │   │   └── lib.rs
+│   │   └── Cargo.toml
+│   └── whale-worker
+│       ├── src
+│       │   └── lib.rs
+│       └── Cargo.toml
+├── architecture.txt
+├── Cargo.lock
+├── Cargo.toml
+└── .gitignore
+
+37 directories, 45 files

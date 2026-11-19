@@ -1,0 +1,16 @@
+
+
+[package]
+name = "serverd"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio.workspace = true
+anyhow.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+whale-tcp = { path = "../../crates/whale-tcp" }
+
