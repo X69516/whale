@@ -1,15 +1,26 @@
+use whale_config::ServerConfig;
 use whale_tcp::{TcpLimits, TcpServer};
 
 pub async fn run() -> anyhow::Result<()> {
-    let address =
-        std::env::var("WHALE_LISTEN_ADDR").unwrap_or_else(|_| "127.0.0.1:8080".to_string());
+    let config = ServerConfig {
+        listen_address: std::env::var("WHALE_LISTEN_ADDR")
+            .unwrap_or_else(|_| "127.0.0.1:8080".to_owned()),
+        ..ServerConfig::default()
+    };
 
-    let limits = TcpLimits::default();
+    config.validate()?;
 
-    let server = TcpServer::bind(&address, limits).await?;
+    let limits = TcpLimits {
+        max_connections: config.max_connections,
+        connection_timeout: config.connection_timeout,
+        shutdown_timeout: config.shutdown_timeout,
+    };
+
+    let server = TcpServer::bind(&config.listen_address, limits).await?;
 
     tracing::info!(
-        address = %address,
+        address = %config.listen_address,
+        max_connections = config.max_connections,
         "Whale server listening"
     );
 

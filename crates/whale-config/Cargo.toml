@@ -3,5 +3,7 @@ name = "whale-config"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+description = "Configuration management for Whale"
 
 [dependencies]
+whale-core = { path = "../whale-core" }

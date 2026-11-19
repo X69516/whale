@@ -11,4 +11,4 @@ tokio.workspace = true
 anyhow.workspace = true
 tracing.workspace = true
 tracing-subscriber.workspace = true
-
+whale-config = { path = "../../crates/whale-config" }
