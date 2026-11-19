@@ -1,4 +1,4 @@
-use std::{future::Future, io, net::SocketAddr, sync::Arc};
+use std::{future::Future, io, sync::Arc};
 
 use tokio::{
     net::{TcpListener, ToSocketAddrs},
